@@ -27,6 +27,9 @@ void play_sound(Mix_Chunk *beep){
     Mix_PlayChannel(-1, beep, 0);
 }
 
+void stop_sound(){
+    Mix_HaltChannel(-1);
+}
 
 /* TODO:
     Mix_Chunk *beep_sinusoid = Mix_LoadWAV(FILE_PATH);

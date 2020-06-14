@@ -16,12 +16,15 @@ GtkBuilder *builder;
 
 static Mix_Chunk *BEEP;
 
+int *flag = 0;
+
 int main(int argc, char *argv[])
 {
     /*initialize gtk and SDL*/
-    BEEP = load_sound(BEEP_SINUSOID);
     gtk_init(&argc, &argv);
     startSDL();
+
+    BEEP = load_sound(BEEP_SINUSOID);
 
     builder = gtk_builder_new_from_file("glade/window_main.glade");
 
@@ -48,7 +51,18 @@ void on_window_main_destroy()
 
 void on_btn_play_clicked()
 {
-    play_sound(BEEP);
+    if (flag == 0){
+        flag = 1;
+        while (1){
+            play_sound(BEEP);
+            /*TODO: implement time setting*/
+            usleep(1000000);
+        }
+    }
+    else {
+        stop_sound();
+        flag = 0;
+    }
     /*sample*/
     g_print("Ciao");
 }
