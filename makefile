@@ -22,19 +22,16 @@ SDLLIB= -lSDL -lSDL_mixer
 LD=gcc
 LDFLAGS=$(PTHREAD) $(GTKLIB) $(SDLLIB) -export-dynamic
 
-OBJS=	main.o audio.o gtk_functions.o
+OBJS=	main.o audio.o
 
 all: $(OBJS)
-	$(LD) -o $(TARGET) $(OBJS) $(LDFLAGS)
+	$(LD) -o $(TARGET) $(OBJS) $(LDFLAGS) -lm
 
 main.o: src/main.c
 	$(CC) -c $(CCFLAGS) src/main.c $(GTKLIB) $(SDLLIB) -o main.o
 
 audio.o: src/audio.c
 	$(CC) -c $(CCFLAGS) src/audio.c $(SDLLIB) -o audio.o
-
-gtk_functions.o: src/gtk_functions.c
-	$(CC) -c $(CCFLAGS) src/gtk_functions.c $(GTKLIB) -o gtk_functions.o
 
 clean:
 	rm -f *.o $(TARGET)

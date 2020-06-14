@@ -16,7 +16,8 @@ Mix_Chunk* load_sound(char *file_ptr){
     Mix_Chunk *sound = Mix_LoadWAV(file_ptr);
     if (sound==NULL)
     {
-        fprintf(stderr, "Error: something loading %s went wrong\n", file_ptr);
+        /*TODO error handling*/
+        fprintf(stderr, "Error: something loading '%s' went wrong\n", file_ptr);
     }
 
     return sound;

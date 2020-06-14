@@ -1,6 +1,6 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
-#define BEEP_SINUSOID       "../sounds/beep_sinusoid.wav"
+#define BEEP_SINUSOID "sounds/beep_sinusoid.wav"
 
 /*init SDL function*/
 void startSDL();
