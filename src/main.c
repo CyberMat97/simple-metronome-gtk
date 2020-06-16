@@ -6,6 +6,8 @@
 #include <SDL2/SDL_mixer.h>
 #include "audio.h"
 
+static gboolean continue_value;
+
 /*create a pointer to your Glade objects*/
 GtkWidget *window;
 GtkWidget *btn_play;
@@ -16,6 +18,12 @@ GtkBuilder *builder;
 
 static Mix_Chunk *BEEP;
 static gboolean start = FALSE;
+
+gboolean play_sound(Mix_Chunk *beep){
+    Mix_PlayChannel(-1, beep, 0);
+
+    return continue_value;
+}
 
 int main(int argc, char *argv[])
 {
@@ -35,7 +43,6 @@ int main(int argc, char *argv[])
     sbtn_speed = GTK_WIDGET(gtk_builder_get_object(builder, "sbtn_speed"));
     lbl_text = GTK_WIDGET(gtk_builder_get_object(builder, "lbl_text"));
 
-
     gtk_widget_show(window);
     gtk_main();
 
@@ -53,7 +60,7 @@ void on_btn_play_clicked()
     if (start == FALSE){
         start = TRUE;
         continue_value = TRUE;
-        g_timeout_add_seconds(1, play_sound, BEEP);
+        g_timeout_add(1000, play_sound, BEEP);
         /*TODO: implement time setting*/
         /*usleep(1000000);*/
 

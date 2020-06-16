@@ -3,7 +3,7 @@
 #include <gtk/gtk.h>
 #define BEEP_SINUSOID "sounds/beep_sinusoid.wav"
 
-static gboolean continue_value = TRUE;
+
 
 /*init SDL function*/
 void startSDL();
@@ -15,7 +15,7 @@ void closeSDL();
 Mix_Chunk* load_sound(char *file_ptr);
 
 /*self explanatory name*/
-gboolean play_sound(Mix_Chunk *beep);
+/*gboolean play_sound(Mix_Chunk *beep);*/
 
 /*stop sound from all channels*/
 void stop_sound();

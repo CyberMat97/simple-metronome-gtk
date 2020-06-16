@@ -24,11 +24,11 @@ Mix_Chunk* load_sound(char *file_ptr){
     return sound;
 }
 
-gboolean play_sound(Mix_Chunk *beep){
+/*gboolean play_sound(Mix_Chunk *beep){
     Mix_PlayChannel(-1, beep, 0);
 
     return continue_value;
-}
+}*/
 
 void stop_sound(){
     Mix_HaltChannel(-1);
