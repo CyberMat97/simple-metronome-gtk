@@ -31,7 +31,7 @@ main.o: src/main.c
 	$(CC) -c $(CCFLAGS) src/main.c $(GTKLIB) $(SDLLIB) -o main.o
 
 audio.o: src/audio.c
-	$(CC) -c $(CCFLAGS) src/audio.c $(SDLLIB) -o audio.o
+	$(CC) -c $(CCFLAGS) src/audio.c $(GTKLIB) $(SDLLIB) -o audio.o
 
 clean:
 	rm -f *.o $(TARGET)

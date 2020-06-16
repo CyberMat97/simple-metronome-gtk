@@ -15,8 +15,7 @@ GtkWidget *lbl_text;
 GtkBuilder *builder;
 
 static Mix_Chunk *BEEP;
-
-int *flag = 0;
+static gboolean start = FALSE;
 
 int main(int argc, char *argv[])
 {
@@ -51,18 +50,18 @@ void on_window_main_destroy()
 
 void on_btn_play_clicked()
 {
-    if (flag == 0){
-        flag = 1;
-        while (1){
-            play_sound(BEEP);
-            /*TODO: implement time setting*/
-            usleep(1000000);
-        }
-    }
-    else {
+    if (start == FALSE){
+        start = TRUE;
+        continue_value = TRUE;
+        g_timeout_add_seconds(1, play_sound, BEEP);
+        /*TODO: implement time setting*/
+        /*usleep(1000000);*/
+
+    } else {
+        continue_value = FALSE;
         stop_sound();
-        flag = 0;
+        start = FALSE;
     }
     /*sample*/
-    g_print("Ciao");
+    g_print("Ciao\n");
 }
