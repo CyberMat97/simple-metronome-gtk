@@ -19,3 +19,6 @@ Mix_Chunk* load_sound(char *file_ptr);
 
 /*stop sound from all channels*/
 void stop_sound();
+
+/*convert bpm value from spin button to msec interval*/
+gdouble bpm_to_msec(gdouble bpm);

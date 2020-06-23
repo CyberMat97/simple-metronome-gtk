@@ -34,6 +34,12 @@ void stop_sound(){
     Mix_HaltChannel(-1);
 }
 
+gdouble bpm_to_msec(gdouble bpm) {
+    gdouble result;
+    result = (60/bpm)*1000;
+    return result;
+}
+
 /* TODO:
     Mix_Chunk *beep_sinusoid = Mix_LoadWAV(FILE_PATH);
 

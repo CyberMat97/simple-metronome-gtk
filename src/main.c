@@ -57,10 +57,13 @@ void on_window_main_destroy()
 
 void on_btn_play_clicked()
 {
+    gdouble spin_buttoon_value;
+    spin_buttoon_value = gtk_spin_button_get_value (sbtn_speed);
+    spin_buttoon_value = bpm_to_msec(spin_buttoon_value);
     if (start == FALSE){
         start = TRUE;
         continue_value = TRUE;
-        g_timeout_add(1000, play_sound, BEEP);
+        g_timeout_add(spin_buttoon_value, play_sound, BEEP);
         /*TODO: implement time setting*/
         /*usleep(1000000);*/
 
