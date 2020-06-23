@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=simple-metronome
+Comment=Metronomo scritto in C e GTK
+Exec=/home/benny/Documenti/gitrepos/simple-metronome-gtk/simple-metronome-gtk
+Icon=/home/benny/Documenti/gitrepos/simple-metronome-gtk/images/icon_metronome.png
+Terminal=false
+Type=Application
