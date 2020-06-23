@@ -2,6 +2,13 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="lower">10</property>
+    <property name="upper">999</property>
+    <property name="value">60</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkWindow" id="window_main">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">metronome-gtk</property>
@@ -64,6 +71,8 @@
             <property name="max_length">3</property>
             <property name="width_chars">10</property>
             <property name="max_width_chars">10</property>
+            <property name="adjustment">adjustment1</property>
+            <property name="climb_rate">1</property>
             <property name="numeric">True</property>
             <property name="value">60</property>
           </object>
