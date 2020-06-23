@@ -65,8 +65,8 @@ void on_btn_play_clicked()
         /*usleep(1000000);*/
 
     } else {
-        continue_value = FALSE;
         stop_sound();
+        continue_value = FALSE;
         start = FALSE;
     }
     /*sample*/

@@ -16,7 +16,7 @@
         <property name="can_focus">False</property>
         <child>
           <object class="GtkButton" id="btn_play">
-            <property name="label" translatable="yes">Play/Pause</property>
+            <property name="label">Play/Pause</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -27,6 +27,7 @@
             <property name="margin_right">10</property>
             <property name="margin_top">10</property>
             <property name="margin_bottom">9</property>
+            <property name="always_show_image">True</property>
             <signal name="clicked" handler="on_btn_play_clicked" swapped="no"/>
           </object>
           <packing>
