@@ -39,7 +39,7 @@ $ cd simple-metronome-gtk
 $ make all
 ```
 
-> to launch the program hust tyoe
+> to launch the program hust type
 
 ```shell
 $ ./simple-metronome-gtk
