@@ -5,8 +5,6 @@
 ## Table of Contents
 
 - [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -44,12 +42,6 @@ $ make all
 ```shell
 $ ./simple-metronome-gtk
 ```
-
----
-
-## Features
-## Usage (Optional)
-## Documentation (Optional)
 
 ---
 
