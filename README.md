@@ -5,8 +5,6 @@
 ## Table of Contents
 
 - [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
 
