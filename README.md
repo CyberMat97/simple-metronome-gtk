@@ -47,15 +47,7 @@ $ ./simple-metronome-gtk
 
 ---
 
-## Features
-## Usage (Optional)
-## Documentation (Optional)
-
----
-
 ## Contributing
-
-> To get started...
 
 ### Step 1
 

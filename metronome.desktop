@@ -1,7 +1,8 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=simple-metronome
 Comment=Metronomo scritto in C e GTK
 Exec=/home/benny/Documenti/gitrepos/simple-metronome-gtk/simple-metronome-gtk
-Icon=/home/benny/Documenti/gitrepos/simple-metronome-gtk/images/icon_metronome.png
+Icon=/home/benny/Documenti/gitrepos/simple-metronome-gtk/images/icon_metronome_2.png
 Terminal=false
 Type=Application
